@@ -1,0 +1,102 @@
+\documentclass[12pt,openany,oneside,a4paper,english,brazil]{abntbibifsemgjf}
+\usepackage{lmodern}						
+\usepackage[T1]{fontenc}		
+\usepackage[utf8]{inputenc}	
+\usepackage{lastpage}			
+\usepackage{indentfirst}		
+\usepackage{color}
+\usepackage{graphics}		
+\usepackage{graphicx}			
+\usepackage{microtype} 			
+\usepackage{amsmath}
+\usepackage{psfrag}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{physics}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+%\usepackage[subpreambles=true]{standalone}
+%\usepackage{active}
+%\usepackage{tightpage}
+%\usepackage{pdftex}
+\usetikzlibrary{matrix,chains,arrows,shapes.multipart,automata,calc,fit,tikzmark,trees,shapes}
+%\usepackage{cite}
+\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage[printonlyused]{acronym}
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+
+
+
+%% -----------------------------------------------------------------------------
+\input{./pretextual/capa.tex}
+\input{./pretextual/ficha_catalografica.tex}
+\setlength{\parindent}{1.3cm}
+\setlength{\parskip}{0.2cm}  
+\setlength\afterchapskip{12pt}  
+
+\hyphenation{tes-te Mecatrônica}
+
+\begin{document}
+
+%% ELEMENTOS PRE-TEXTUAIS
+%% Capa
+\inserecapa				
+%% Folha de rosto
+\inserefolhaderosto
+%% Ficha catalografica.
+\inserecatalog  
+\input{./pretextual/folha_aprovacao.tex}
+\input{./pretextual/dedicatoria.tex}
+\input{./pretextual/agradecimentos.tex}
+\input{./pretextual/epigrafe.tex}
+
+%% RESUMOS
+\input{./pretextual/resumo_portugues.tex}
+\input{./pretextual/resumo_ingles.tex}
+
+%% Lista de ilustracoes. OPCIONAL.
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+%% Lista de tabelas. OPCIONAL. 
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
+
+\input{./pretextual/siglas.tex}
+%% Sumario
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+\textual
+\pagestyle{simple}   
+
+%% TEXTO DA MONOGRAFIA (ELEMENTOS TEXTUAIS)
+
+\input{./textual/cap01}
+%\input{./textual/cap02}
+\input{./textual/cap03}
+\input{./textual/cap04}
+\input{./textual/cap05}
+\input{./textual/cap06}
+
+
+\postextual
+%	\bibliographystyle{abnt}
+	\bibliography{bibliografia}
+%\appendix
+%\input{./postextual/apendice.tex}
+	
+%%---Apêndice	
+%\begin{apendicesenv}
+%	\input{apendice.tex}
+%\end{apendicesenv}
+
+\end{document}

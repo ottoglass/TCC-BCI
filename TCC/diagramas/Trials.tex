@@ -1,0 +1,14 @@
+\tikzstyle{class} = [rectangle split,rectangle split parts=1,draw ,text badly centered, node distance=1cm,scale=0.9]
+\begin{tikzpicture}
+[edge from parent fork down,sibling distance=4cm,level distance=7cm,
+edge from parent/.style={draw,<-,line width=1.2pt}]
+\node[class,rectangle split parts=2](Database)
+	{
+	\nodepart{one}  \textcolor{blue}{\large{Trials}}
+	 \nodepart{two} \begin{tabular}{cc}
+					\textcolor{purple}{Trials}(path)\\
+					\textcolor{purple}{Trials}(path,labels)\\
+					\end{tabular}
+				
+};
+\end{tikzpicture}

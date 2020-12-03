@@ -1,0 +1,40 @@
+\tikzstyle{sample}=[minimum height=1cm,minimum width=4cm,xshift=2cm,draw=black]
+\tikzstyle{plotsf}=[smooth,yscale=0.05,xscale=8,color=blue]
+%\tikzstyle{lines}=[color=black,line width=0.5mm]
+\tikzstyle{lines}=[color=black,very thick]
+\begin{tikzpicture}[
+ brc/.style args = {#1/#2}{decorate,
+	decoration={brace, amplitude=5pt,
+		raise=#1,#2},% for mirroring of brace
+	thick},]
+%\begin{axis}[axis line style={draw=none},
+%tick style={draw=none},]
+%	\addplot table[y=y,x=t,col sep=comma] {./dados/EEG2.csv};
+%\end{axis}
+\draw (0,0)  [plotsf] plot file {./dados/EEG2.table};
+\draw [lines, dashdotted ](2cm,0.5cm)--(2cm,-4cm);
+\draw [lines, dashdotted ](4cm,0.5cm)--(4cm,-4cm);
+\draw [lines](2cm,-3.5cm)--(4cm,-3.5cm) node [midway,below] {\textbf{overlap}};
+\draw [thick,double,->] (4.5cm,-3cm)--(4.5cm,-4cm)--(10cm,-4cm) node [midway,below]{\tiny{\textbf{Extra\c{c}\~ao de caracter\'isticas}}};
+\draw (0,0) node (s0) [sample,minimum width=16cm,xshift=6cm]{};
+\begin{scope}[yshift=-1.25cm]
+\draw (0,0) [plotsf] plot file {./dados/EEG1-1.table};
+\draw (0,0) node (s1) [sample] {};
+\end{scope}
+\node (s1text) [right=of s1,xshift=-1cm]{Janela 1};
+\begin{scope}[yshift=-2.5cm]
+\draw (0,0)[plotsf] plot  file {./dados/EEG1-2.table};
+\draw (0,0) node (s2) [sample,xshift=2cm] {};
+\end{scope}
+\node (s1text) [right=of s2,xshift=-1cm]{Janela 2};
+\begin{scope}[xshift=10cm,yshift=-5cm]
+\begin{scope}[scale=0.6]
+\begin{axis}[%axis line style={draw=none},
+tick style={draw=none},
+]
+	\addplot table[y=P,x=f,col sep=comma] {./dados/EEGWelch2.csv};
+\end{axis}
+\end{scope}
+\end{scope}
+\draw[brc=2mm/](0,0.5)--(16,0.5) node [midway,above,yshift=6]{\textbf{Experimento}};
+\end{tikzpicture}

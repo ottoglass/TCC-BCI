@@ -1,0 +1,28 @@
+\tikzstyle{sample}=[minimum height=1cm,minimum width=4cm,xshift=2cm,draw=black]
+\tikzstyle{plotsf}=[smooth,yscale=0.05,xscale=8,color=blue]
+%\tikzstyle{lines}=[color=black,line width=0.5mm]
+\tikzstyle{lines}=[color=black,very thick]
+\begin{tikzpicture}[
+ brc/.style args = {#1/#2}{decorate,
+	decoration={brace, amplitude=5pt,
+		raise=#1,#2},% for mirroring of brace
+	thick},]
+%\begin{axis}[axis line style={draw=none},
+%tick style={draw=none},]
+%	\addplot table[y=y,x=t,col sep=comma] {./dados/EEG2.csv};
+%\end{axis}
+\begin{scope}[xshift=0cm,yshift=-2.5cm]
+\draw (0,0)[plotsf] plot  file {./dados/EEG1-2.table};
+
+\draw (0,0) node (s2) [sample,xshift=2cm] {};
+\end{scope}
+
+tick style={draw=none},
+]
+\draw [thick,double,color=black] (4.5cm,-3cm)--(4.5cm,-4cm)--(8cm,-4cm) node [below]{\tiny{\textbf{Extra\c{c}\~ao de caracter\'isticas}}} node [above]{$f(t)\rightarrow F(S)$};
+\draw [thick,double,->,color=black] (8cm,-4cm)--(10cm,-4cm)--(10cm,-3cm) ;
+\begin{scope}[xshift=8.5cm,yshift=-3cm,xscale=.02,yscale=-.15,rotate=-90]%,xcomb]
+\draw (0,0) [color=black]rectangle (15,150);
+\draw (0,0)[color=blue,thick]  plot  file {./dados/EEGWelch2.table};
+\end{scope}
+\end{tikzpicture}

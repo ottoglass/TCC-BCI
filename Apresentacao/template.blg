@@ -1,0 +1,14 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: template.aux
+I couldn't open database file bibliografia.bib.bib
+---line 126 of file template.aux
+ : \bibdata{bibliografia.bib
+ :                          }
+I'm skipping whatever remains of this command
+The style file: plain.bst
+I found no database files---while reading file template.aux
+Warning--I didn't find a database entry for "Rao2010"
+Warning--I didn't find a database entry for "BCI2000"
+Warning--I didn't find a database entry for "Qin2004"
+Warning--I didn't find a database entry for "EEGPrinciple"
+Warning--I didn't find a database entry for "GrazBData"
+(There were 2 error messages)

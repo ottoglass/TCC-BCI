@@ -1,0 +1,8 @@
+\begin{tikzpicture}[domain=-1.5:1.5,scale=2]
+%\draw[very thin,color=gray,step=0.25] (-1.4,-1.4) grid (1.4,1.4);
+\draw[loosely dashed,thick](-1.6,-1) -- (+1.6,-1) node[right] {$-1$};
+\draw[loosely dashed,thick](-1.6,1) -- (+1.6,1) node[right] {$1$};
+\draw[->] (-1.6,0) -- (1.6,0) node[right]{$s$};
+\draw[->] (0,-1.6) -- (0,1.6) node[above]{$\varphi \left( s \right) $};
+\draw[very thick,color=cyan] plot (\x,{1/(1+exp(-5*\x))});
+\end{tikzpicture}

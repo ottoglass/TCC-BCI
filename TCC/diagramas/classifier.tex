@@ -1,0 +1,60 @@
+\tikzstyle{class} = [rectangle split,rectangle split parts=1,draw ,text badly centered, node distance=1cm,scale=0.7]
+\begin{tikzpicture}
+[edge from parent fork down,sibling distance=4cm,level distance=7cm,
+edge from parent/.style={draw,<-,line width=1.2pt}]
+\node[class,rectangle split parts=3](Classifier)
+	{
+	\nodepart{one}  \textcolor{blue}{\large{\textit{Classifier}}}
+	 \nodepart{two} \begin{tabular}{cc}
+	 					 \textit{\textcolor{purple}{train}}()\\
+ 						 \textit{\textcolor{purple}{predict}}()\\
+					\end{tabular}
+	 \nodepart{three} \begin{tabular}{cc}
+					\textcolor{purple}{calculatePerformance}(ValidationSet)\\
+					\textcolor{purple}{exportModel}()\\
+					\textcolor{purple}{loadModel}(Model)\\
+					\textcolor{purple}{loadTrainingData}(TrainingDataset)\\
+					\end{tabular}
+				
+	}
+	child{ node [class, rectangle split parts=2] (LinearSVM)
+		{
+		\nodepart{one} \large{\textcolor{blue}{LinearSVM}}
+		\nodepart{two} \begin{tabular}{cc}
+							\textcolor{purple}{LinearSVM}()\\
+							\textcolor{purple}{train}()\\
+							\textcolor{purple}{predict}()\\
+						\end{tabular}
+		}
+	}
+	child{ node [class, rectangle split parts=2] (gaussianSVM)
+		{
+		\nodepart{one} \large{\textcolor{blue}{gaussianSVM}}
+		\nodepart{two} \begin{tabular}{cc}
+		\textcolor{purple}{gaussianSVM}(KernelScale)\\
+		\textcolor{purple}{train}()\\
+		\textcolor{purple}{predict}()\\
+		\end{tabular}
+		}
+	}
+	child{ node [class, rectangle split parts=2] (kNN)
+		{
+		\nodepart{one} \large{\textcolor{blue}{kNN}}
+		\nodepart{two} \begin{tabular}{cc}
+		\textcolor{purple}{kNN}(numNeighbours)\\
+		\textcolor{purple}{train}()\\
+		\textcolor{purple}{predict}()\\
+		\end{tabular}
+		}
+	}
+	child{ node [class, rectangle split parts=2] (ANN)
+		{
+			\nodepart{one} \large{\textcolor{blue}{ANN}}
+			\nodepart{two} \begin{tabular}{cc}
+			\textcolor{purple}{ANN}(Layers)\\
+			\textcolor{purple}{train}()\\
+			\textcolor{purple}{predict}()\\
+			\end{tabular}
+		}
+};
+\end{tikzpicture}

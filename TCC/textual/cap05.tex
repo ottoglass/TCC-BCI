@@ -1,0 +1,75 @@
+\chapter{Resultados e An\'alises} \label{lab_Resultados}
+\section{Performances M\'edias}
+\subsection{Overlap vs Janela de Amostragem}
+\par
+A figura \ref{fig:kappa-over-vs-win} sugere usar um valor de 25\% de overlap, que produz o melhor resultado entre os valores verificados. Esta observa\c{c}\~ao pode ser explicada com uma semelhan\c{c}a maior entre as observa\c{c}\~oes se as janelas tiverem um overlap de 50\%, o que tem impacto negativo no desempenho do classificador.
+Tamb\'em podemos notar que a performance se beneficia de janelas de amostragem maior. Entretanto, esse efeito se reduz a partir de 25\% de overlap e janelas de um segundo.
+\begin{figure}[!h]
+	\caption{(A) Kappa Overlap vs Window (B) Kappa Overlap vs Window para o experimento completo}
+	\label{fig:kappa-over-vs-win}
+	\input{resultados/kappa-overlapvswinlen.tex}
+	\input{resultados/fullkappa-overlapvswinlen.tex}
+\end{figure}
+\subsection{Classificadores}
+Na figura \ref{fig:ClassPerf} podemos observar que por uma margem significativa o classificador com a melhor performance foi o  \ac{L-SVM}. As redes neurais (\acs{ANN-2} e \acs{ANN-3} tiveram performances medianas junto com o \ac{C-SVM}.
+ A pior performance por uma margem significativa foi do \ac{F-SVM} em que o parâmetro $K$ do kernel teve um impacto negativo na generaliza\c{c}\~ao do classificador. 
+\begin{figure}[h]
+	\caption{Performance m\'edia dos classificadores utilizados}
+	\label{fig:ClassPerf}
+	\centering
+	\input{resultados/perf-classificador.tex}
+\end{figure}
+\subsection{Fun\c{c}\~oes de extra\c{c}\~ao vs Janela de Amostragem}
+A figura \ref{fig:PSDPerf} sugere que com o aumento da janela de amostragem a performance melhora igualmente para os \ac{PWelch} e \ac{PMTM} sendo que o desempenho do \ac{PMTM} foi ligeiramente maior. O \ac{PSDp} teve claramente a pior performance isso \'e poss\'ivelmente devido \`a sua falta de capacidade de lidar com ru\'idos. 
+\begin{figure}[h]
+	\caption{Performance m\'edia das Fun\c{c}\~oes de extra\c{c}\~ao utilizadas vs Janela de amostragem}
+	\label{fig:PSDPerf}
+	\centering
+	\input{resultados/perf-psd.tex}
+\end{figure}
+\section{Melhores Performances}
+\par Pode-se observar nas tabelas abaixo a preval\^encia do \ac{L-SVM} nas melhores posi\c{c}\~oes entre os classificadores e do \ac{PMTM} nas fun\c{c}\~oes de extra\c{c}\~aos. Na performance utilizando o intervalo completo e na performance de janela de amostragem de at\'e 2 segundos o melhor overlap foi de 25\% enquanto para a performance de at\'e 0.5 segundos o melhor overlap foi o de 50\%.
+\begin{table}[h!]
+	\centering
+	\caption{Melhores performances na m\'etrica do experimento}
+	\begin{tabularx}{\textwidth}{c|c|c|c|c|c|c|c|c}		
+		\hline\hline
+		Pos&$\kappa_1$ &$\text{ACC}_1$&$\kappa_2$&$\text{ACC}_2$&Janela& Overlap&Fun\c{c}\~ao&Classificador  \\ \hline 
+		$1^{\underline{o}}$&0.422&71.14\%&0.526&76.32\%&2s&25\%&PWelch&\acs{L-SVM} \\ \hline 
+		$2^{\underline{o}}$&0.426&71.35\%&0.512&75.62\%&2s&25\%&PMTM&L-SVM \\ \hline
+		$3^{\underline{o}}$&0.421&71.06\%&0.491&74.58\%&2s&25\%&PMTM&\acs{ANN-3} \\ \hline
+		$4^{\underline{o}}$&0.407&70.36\%&0.490&74.51\%&1s&25\%&PMTM&L-SVM \\ \hline
+		$5^{\underline{o}}$&0.402&70.11\%&0.484&74.23\%&1s&25\%&PMTM&\ac{ANN-2} \\ \hline
+	\end{tabularx}
+	\label{Tab:melhoresKappaFull}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Melhores performances por Janela de amostragem de at\'e 2s}
+	\begin{tabularx}{\textwidth}{c|c|c|c|c|c|c|c|c}		
+		\hline\hline
+		Pos&$\kappa_1$ &$\text{ACC}_1$&$\kappa_2$&$\text{ACC}_2$&Janela& Overlap&Fun\c{c}\~ao&Classificador  \\ \hline
+		$1^{\underline{o}}$&0.426&71.35\%&0.512&75.62\%&2s&25\%&PMTM&L-SVM \\ \hline 
+		$2^{\underline{o}}$&0.422&71.14\%&0.526&76.32\%&2s&25\%&PWelch&L-SVM\\ \hline
+		$3^{\underline{o}}$&0.421&71.07\%&0.452&72.61\%&2s&0\%&PMTM&L-SVM \\ \hline
+		$4^{\underline{o}}$&0.421&71.06\%&0.491&74.58\%&2s&25\%&PMTM&ANN-3 \\ \hline
+		$5^{\underline{o}}$&0.418&70.95\%&0.466&73.33\%&2s&50\%&PMTM&L-SVM \\ \hline
+	\end{tabularx}
+	\label{Tab:melhoresKappa}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Melhores performances por Janela de amostragem de at\'e 0.5s}
+	\begin{tabularx}{\textwidth}{c|c|c|c|c|c|c|c|c}		
+		\hline\hline
+		Pos&$\kappa_1$ &$\text{ACC}_1$&$\kappa_2$&$\text{ACC}_2$&Janela& Overlap&Fun\c{c}\~ao&Classificador  \\ \hline
+		$1^{\underline{o}}$&0.293&64.69\%&0.401&70.09\%&0.5s&	50\%&PMTM&L-SVM \\ \hline 
+		$2^{\underline{o}}$&0.286&64.31\%&0.388&69.45\%&0.5s&	50\%&PWelch&L-SVM \\ \hline
+		$3^{\underline{o}}$&0.284&64,21\%&0.399&69.98\%&0.5s&25\%&PMTM&L-SVM \\ \hline
+		$4^{\underline{o}}$&0.280&64,01\%&0.397&69.88\%&0.5s&25\%&PWelch&L-SVM \\ \hline
+		$5^{\underline{o}}$&0.275&63.78\%&0.391&69.57\%&0.5s&	25\%&PMTM&ANN-2 \\ \hline
+	\end{tabularx}
+	\label{Tab:melhoresKappa125}
+\end{table}

@@ -1,0 +1,36 @@
+\tikzstyle{class} = [rectangle split,rectangle split parts=1,draw ,text badly centered, node distance=1cm,scale=0.7]
+\begin{tikzpicture}
+[edge from parent fork down,sibling distance=5cm,level distance=4cm,
+edge from parent/.style={draw,<-,line width=1.2pt}]
+\node[class,rectangle split parts=2](FeatureExtractionFnc)
+	{
+	\nodepart{one}  \textcolor{blue}{\large{\textit{FeatureExtractionFnc}}}
+	 \nodepart{two} \begin{tabular}{cc}
+	 					 \textit{\textcolor{purple}{ExtractFeature}}(C3,Cz,C4)\\
+					\end{tabular}
+	}
+	child{ node [class, rectangle split parts=2] (PWelch)
+		{
+		\nodepart{one} \large{\textcolor{blue}{PWelch}}
+		\nodepart{two} \begin{tabular}{cc}
+							\textcolor{purple}{ExtractFeature}(C3,Cz,C4)\\
+						\end{tabular}
+		}
+	}
+	child{ node [class, rectangle split parts=2] (PSD)
+		{
+		\nodepart{one} \large{\textcolor{blue}{PSD}}
+		\nodepart{two} \begin{tabular}{cc}
+		\textcolor{purple}{ExtractFeatures}(C3,Cz,C4)\\
+		\end{tabular}
+		}
+	}
+	child{ node [class, rectangle split parts=2] (PMTM)
+		{
+		\nodepart{one} \large{\textcolor{blue}{PMTM}}
+		\nodepart{two} \begin{tabular}{cc}
+		\textcolor{purple}{ExtractFeatures}(C3,Cz,C4)\\
+		\end{tabular}
+		}
+	};
+\end{tikzpicture}

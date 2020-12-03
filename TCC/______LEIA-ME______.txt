@@ -1,0 +1,9 @@
+Para utilização deste template, deve-se ter a distribuição LaTeX MiKTeX versão 2.9 instalada.
+
+- O documento mestre (root) a ser utilizado é o arquivo "principal.tex"
+- O texto do documento pode ser digitado nos arquivos "/textual/cap01.tex", "/textual/cap02.tex", "/textual/cap03.tex", etc.
+
+DICA: Se você não teve contato com a edição de documentos em LaTeX, há várias opções de tutoriais (inclusive em português) disponíveis no YouTube.
+
+
+CTCC (Template-TCC-v.1.2)

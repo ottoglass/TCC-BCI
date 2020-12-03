@@ -1,0 +1,666 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Focus Beamer Presentation
+% LaTeX Template
+% Version 1.0 (8/8/18)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Pasquale Africa (https://github.com/elauksap/focus-beamertheme) with modifications by 
+% Vel (vel@LaTeXTemplates.com)
+%
+% Template license:
+% GNU GPL v3.0 License
+%
+% Important note:
+% The bibliography/references need to be compiled with bibtex.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass{beamer}
+\usepackage{lmodern}						
+\usepackage[T1]{fontenc}		
+\usepackage[utf8]{inputenc}	
+\usepackage{lipsum}
+\usepackage{lastpage}			
+\usepackage{indentfirst}		
+\usepackage{color}			
+\usepackage{graphicx}			
+\usepackage{microtype} 			
+\usepackage{amsmath}
+\usepackage{psfrag}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{physics}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usetikzlibrary{matrix,chains,arrows,shapes.multipart,automata,calc,fit,tikzmark,trees,shapes}
+
+\usetheme{focus} % Use the Focus theme supplied with the template
+% Add option [numbering=none] to disable the footer progress bar
+% Add option [numbering=fullbar] to show the footer progress bar as always full with a slide count
+
+% Uncomment to enable the ice-blue theme
+%\definecolor{main}{RGB}{92, 138, 168}
+%\definecolor{background}{RGB}{240, 247, 255}https://www.overleaf.com/project/5ee63eecb6cd7b00012c03e1
+
+%------------------------------------------------
+%\usepackage{pgfplots}
+
+\usepackage{booktabs} % Required for better table rules
+
+%----------------------------------------------------------------------------------------
+%	 TITLE SLIDE
+%----------------------------------------------------------------------------------------
+
+\title{Compara\c{c}\~ao de t\'ecnicas de \\aprendizagem de m\'aquina e\\ processamento de sinal para BCIs}
+
+%\subtitle{Subtitle}
+
+\author{Aluno: Otto Luiz A. Glass \\ Orientador: Thiago da Silva Castro}
+
+\titlegraphic{\includegraphics[scale=0.15]{Images/brain.png}} % Optional title page image, comment this line to remove it
+
+\institute{Instituto Federal Sudeste MG \\ Campus Juiz de Fora}
+
+\date{14 06 2020}
+
+%------------------------------------------------
+
+\begin{document}
+
+%------------------------------------------------
+
+\begin{frame}
+	\maketitle % Automatically created using the information in the commands above
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	 SECTION 1
+%----------------------------------------------------------------------------------------
+
+%\section{Introdu\c{c}\~ao}
+\begin{frame}{Etapas da Interface}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+           \begin{center}
+               \begin{figure}
+                   \centering
+                   \includegraphics[scale=.30]{Images/bci-stages.png}
+                   \caption{Etapas BCI\cite{Rao2010}}
+                   \label{fig:Estagio_BCI}
+               \end{figure}
+           \end{center}
+       \end{column}
+       \begin{column}{0.5\textwidth}
+       \begin{itemize}
+           \item Sinal: Ondas $\mu$
+           \item Extra\c{c}\~ao de caracteristicas: STFT, Espectro de Welch e Multitaper
+           \item Reconhecimento de pad\~oes: Redes Neurais, SVM e Vizinhos Proximos
+       \end{itemize}
+       \end{column}
+    \end{columns}
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}{Ritimo $\mu$}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+           \begin{center}
+               \begin{figure}
+                   \centering
+                   \includegraphics[scale=0.25]{Images/ERDmu.PNG}
+                   \caption{\cite{BCI2000}}
+                   \label{fig:Estagio_BCI}
+               \end{figure}
+           \end{center}
+         \end{column}
+         \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Componente principal $10Hz$ Amplitude $10\mu$ - $20\mu$
+                \item Presente na aus\^encia de movimento
+            \end{itemize}
+         \end{column}
+    \end{columns}               
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}{Ritimo $\mu$}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+           \begin{center}
+               \begin{figure}
+                   \centering
+                   \includegraphics[scale=0.25]{Images/mu-left-vs-right.png}
+                   \caption{\cite{Qin2004}}
+                   \label{fig:Estagio_BCI}
+               \end{figure}
+           \end{center}
+         \end{column}
+         \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+               \includegraphics[scale=0.45]{Images/10-20_cranio.png}
+               \caption{\cite{EEGPrinciple}}
+               \label{fig:Estagio_BCI}
+            \end{figure}
+         \end{column}
+    \end{columns}           
+\end{frame}
+
+%------------------------------------------------
+%---------------Filtragem EOG--------------------
+%------------------------------------------------
+\begin{frame}{Filtragem EOG}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+           \begin{center}
+               \begin{figure}
+                   \centering
+                   \includegraphics[scale=0.20]{Images/FiltragemEOG.png}
+                  % \caption{\cite{Qin2004}}
+                  % \label{fig:Fil}
+               \end{figure}
+           \end{center}
+         \end{column}
+        % \begin{column}{0.5\textwidth}
+         %   \begin{itemize}
+         %       \item
+        %    \end{itemize}
+        % \end{column}
+    \end{columns}           
+\end{frame}
+
+
+%\section{Metodologia} % Section title slide, unnumbered
+
+%------------------------------------------------
+
+\begin{frame}{Dataset}
+
+ 	\centering
+ 	\begin{table}[]
+        \begin{tabular}{lll}
+        \hline
+        ID & Training               & Evalutation    \\ \hline
+        1  & B0101T, B0102T, B0103T & B0101E, B0102E \\
+        2  & B0201T, B0202T, B0203T & B0201E, B0202E \\
+        3  & B0301T, B0302T, B0303T & B0301E, B0302E \\
+        4  & B0401T, B0402T, B0403T & B0401E, B0402E \\
+        5  & B0501T, B0502T, B0503T & B0501E, B0502E \\
+        6  & B0601T, B0602T, B0603T & B0601E, B0602E \\
+        7  & B0701T, B0702T, B0703T & B0701E, B0702E \\
+        8  & B0801T, B0802T, B0803T & B0801E, B0802E \\
+        9  & B0901T, B0902T, B0903T & B0901E, B0902E \\ \hline
+        \end{tabular}
+        \end{table}
+ 	 \caption{ \cite{GrazBData}}	
+ 	\label{fig:Data-Graz}
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}{Amostras}
+ \begin{figure}[h!]
+ 	\centering
+ 	\includegraphics[scale=0.42]{./Images/graz-eog}
+ 	 \caption{Segmento EOG nas sess\~oes do graz-b \cite{GrazBData}}	
+ 	\label{fig:Graz-EOG}
+ \end{figure}
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}{Sessões}
+  \begin{figure}[h!]
+  	\centering
+ 	\includegraphics[scale=0.35]{./Images/graz_b_session}
+ 	 \caption{Os dois tipos de sess\~ao em Graz-b \cite{GrazBData}.}
+ 	\label{fig:Graz-Session}
+ \end{figure}
+\end{frame}
+%--------------------------------------------------
+   
+%\section{Teoria}
+
+%--------------------------------------------------
+\begin{frame}{Sampling}
+%\begin{center}
+\color{black}
+\scalebox{.7}{
+	\input{./graficos/sampling.tex}}
+%\end{center}
+\end{frame}
+%--------------------------------------------------
+
+\begin{frame}{Processamento de Sinais}
+\scalebox{.8}{
+\input{./graficos/processamento.tex}
+}
+\end{frame}
+%--------------------------------------------------
+
+\begin{frame}{Espectro de Welch}
+            \color{black}
+
+\scalebox{.6}{
+\input{./graficos/Welch.tex}
+}
+\end{frame}
+%--------------------------------------------------
+
+\begin{frame}{Multitaper}
+            \color{black}
+
+\scalebox{.5}{
+\input{./graficos/multitaper.tex}
+}
+\end{frame}
+
+%--------------------------------------------------
+\begin{frame}{Aprendizado de Maquinas}
+\color{black}
+
+%\scalebox{.4}{\input{./graficos/NNGenerico.tex}}
+%\scalebox{.5}{\input{./graficos/SVM.tex}}
+\vspace{1cm}
+\scalebox{.6}{
+\input{./graficos/NNGenerico.tex}
+\input{./graficos/SVM.tex}}
+%\input{./graficos/KNN2.tex}
+
+\end{frame}
+%--------------------------------------------------
+
+\begin{frame}{Redes Neurais}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}            
+            \color{black}
+            
+            %\scalebox{.4}{\input{./graficos/NNGenerico.tex}}
+            %\scalebox{.5}{\input{./graficos/SVM.tex}}
+            \vspace{1cm}
+            \scalebox{.6}{
+            \input{./graficos/NNGenerico.tex}
+            %\input{./graficos/SVM.tex}
+            
+            %\input{./graficos/KNN2.tex}
+            }
+            \end{column}
+            \begin{column}{0.5\textwidth}
+                \begin{itemize}
+                    \item Camadas Ocultas com 20 Neuronios
+                \end{itemize}
+            \end{column}
+    \end{columns}        
+\end{frame}
+%--------------------------------------------------
+
+\begin{frame}{SVM}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}            
+            \color{black}
+            
+            %\scalebox{.4}{\input{./graficos/NNGenerico.tex}}
+            %\scalebox{.5}{\input{./graficos/SVM.tex}}
+            \vspace{1cm}
+            \scalebox{.6}{
+            %\input{./graficos/NNGenerico.tex}
+            \input{./graficos/SVM.tex}
+            
+            %\input{./graficos/KNN2.tex}
+            }
+            \end{column}
+            \begin{column}{0.5\textwidth}
+                \begin{itemize}
+                    \item Kernel Gaussian ("Fino", "Grosso")
+                    \item Kernel Linear
+                \end{itemize}
+            \end{column}
+    \end{columns}        
+\end{frame}
+%--------------------------------------------------
+
+\begin{frame}{Compare Methods}
+\begin{center}
+\color{black}
+\scalebox{.75}{
+	\input{./graficos/comparemethods.tex}}
+\end{center}
+\end{frame}
+
+
+%--------------------------------------------------
+\begin{frame}{Database}
+\begin{center}
+\color{black}
+\scalebox{.95}{
+	\input{./graficos/database.tex}}
+\end{center}
+\end{frame}
+%--------------------------------------------------
+\begin{frame}{Feature Extraction}
+\begin{center}
+\color{black}
+\scalebox{.8}{
+	\input{./graficos/featureextractionfnc.tex}}
+\end{center}
+\end{frame}
+%--------------------------------------------------
+\begin{frame}{Classifier}
+\begin{center}
+\color{black}
+\scalebox{.75}{
+	\input{./graficos/classifier.tex}}
+\end{center}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	 Resultados
+%----------------------------------------------------------------------------------------
+
+%\section{Resultados}
+
+
+\begin{frame}{Overlap e Janelas de Amostragem}
+\color{black}
+    \scalebox{.6}{\input{graficos/kappa-overlapvswinlen.tex}}
+    \scalebox{.6}{\input{graficos/fullkappa-overlapvswinlen}}
+\end{frame}
+\begin{frame}{Classificadores e Extração de Caracteristicas}
+\color{black}
+    \scalebox{.5}{\input{graficos/perf-classificador}}
+    \scalebox{.5}{\input{graficos/perf-psd}}
+\end{frame}
+
+
+%------------------------------------------------------------------------
+\begin{frame}{Melhores Performances}
+\color{black}
+ \centering% used instead the environment center
+    \begin{table}[h!]
+	\caption{Melhores performances na m\'etrica do experimento}
+	\scriptsize
+	\begin{tabularx}{\textwidth}{c|c|c|c|c|c|c|c|c}
+		\hline\hline
+		Pos&$\kappa_1$ &$\text{ACC}_1$&$\kappa_2$&$\text{ACC}_2$&Janela& Overlap&Fun\c{c}\~ao&Classificador  \\ \hline 
+		$1^{\underline{o}}$&0.422&71.14\%&0.526&76.32\%&2s&25\%&PWelch&\acs{L-SVM} \\ \hline 
+		$2^{\underline{o}}$&0.426&71.35\%&0.512&75.62\%&2s&25\%&PMTM&L-SVM \\ \hline
+		$3^{\underline{o}}$&0.421&71.06\%&0.491&74.58\%&2s&25\%&PMTM&\acs{ANN-3} \\ \hline
+		$4^{\underline{o}}$&0.407&70.36\%&0.490&74.51\%&1s&25\%&PMTM&L-SVM \\ \hline
+		$5^{\underline{o}}$&0.402&70.11\%&0.484&74.23\%&1s&25\%&PMTM&\ac{ANN-2} \\ \hline
+	\end{tabularx}
+	
+	\label{Tab:melhoresKappaFull}
+\end{table}
+\end{frame}
+%------------------------------------------------------------------------
+\begin{frame}{Melhores Performances}
+\color{black}
+\centering
+
+\begin{table}[h!]
+
+	\caption{Melhores performances por Janela de amostragem de at\'e 2s}
+	\scriptsize
+	\begin{tabularx}{\textwidth}{c|c|c|c|c|c|c|c|c}		
+		\hline\hline
+		Pos&$\kappa_1$ &$\text{ACC}_1$&$\kappa_2$&$\text{ACC}_2$&Janela& Overlap&Fun\c{c}\~ao&Classificador  \\ \hline
+		$1^{\underline{o}}$&0.426&71.35\%&0.512&75.62\%&2s&25\%&PMTM&L-SVM \\ \hline 
+		$2^{\underline{o}}$&0.422&71.14\%&0.526&76.32\%&2s&25\%&PWelch&L-SVM\\ \hline
+		$3^{\underline{o}}$&0.421&71.07\%&0.452&72.61\%&2s&0\%&PMTM&L-SVM \\ \hline
+		$4^{\underline{o}}$&0.421&71.06\%&0.491&74.58\%&2s&25\%&PMTM&ANN-3 \\ \hline
+		$5^{\underline{o}}$&0.418&70.95\%&0.466&73.33\%&2s&50\%&PMTM&L-SVM \\ \hline
+	\end{tabularx}
+	\label{Tab:melhoresKappa}
+
+\end{table}
+
+\end{frame}
+
+%------------------------------------------------------------------------
+
+\begin{frame}{Melhores Performances}
+\color{black}
+\centering
+
+\begin{table}[h!]
+	\caption{Melhores performances por Janela de amostragem de at\'e 0.5s}
+	\scriptsize
+	\begin{tabularx}{\textwidth}{c|c|c|c|c|c|c|c|c}		
+		\hline\hline
+		Pos&$\kappa_1$ &$\text{ACC}_1$&$\kappa_2$&$\text{ACC}_2$&Janela& Overlap&Fun\c{c}\~ao&Classificador  \\ \hline
+		$1^{\underline{o}}$&0.293&64.69\%&0.401&70.09\%&0.5s&	50\%&PMTM&L-SVM \\ \hline 
+		$2^{\underline{o}}$&0.286&64.31\%&0.388&69.45\%&0.5s&	50\%&PWelch&L-SVM \\ \hline
+		$3^{\underline{o}}$&0.284&64,21\%&0.399&69.98\%&0.5s&25\%&PMTM&L-SVM \\ \hline
+		$4^{\underline{o}}$&0.280&64,01\%&0.397&69.88\%&0.5s&25\%&PWelch&L-SVM \\ \hline
+		$5^{\underline{o}}$&0.275&63.78\%&0.391&69.57\%&0.5s&	25\%&PMTM&ANN-2 \\ \hline
+	\end{tabularx}
+	\label{Tab:melhoresKappa125}
+\end{table}
+
+\end{frame}
+
+
+
+%----------------------------------------------------------------------------------------
+%	 Conclusoes
+%----------------------------------------------------------------------------------------
+
+
+%\section{Conclusões}
+\begin{frame}{Conclus\~ao}
+\color{BLACK}%ER
+\begin{table}[h!]
+	\centering
+	\tiny
+	\caption{Resultados da competi\c{c}\~ao BCI-IV 2008}
+	\begin{tabularx}{\textwidth}{c|X|c|c|c|c|c|c|c|c|c|c}		
+		\hline\hline
+		Pos&contributor&$\kappa$&1&2&3&4&5&6&7&8&9  \\ \hline
+		$1^{\underline{o}}$&Z. Y. Chin&\textbf{0.60}&0.40&0.21&0.22&	0.95&0.86&0.61&0.56&0.85&0.74 \\ \hline 
+		$2^{\underline{o}}$&H. Gan&\textbf{0.58}&0.42&0.21&0.14&0.94&0.71 &0.62&0.61&0.84&0.78 \\ \hline
+		$3^{\underline{o}}$&D. Coyle&\textbf{0.46}&0.19&0.12&0.12 &0.77&0.57&0.49&0.38&0.85&0.61 \\ \hline
+		$4^{\underline{o}}$&S. Lodder&\textbf{0.43}&0.23&0.31&0.07&0.91& 	0.24&0.42&0.41&0.74&0.53 \\ \hline
+		$5^{\underline{o}}$&J. F. D. Saa&\textbf{0.37}&0.20&0.16&0.16&0.73&0.21&0.19&0.39&0.86&0.44 \\ \hline
+		$6^{\underline{o}}$&Y. Ping&\textbf{0.25}&0.02&0.09&0.07&0.43&0.25&0.00&0.14&0.76&0.47\\ \hline\hline
+		-&L-SVM PMTM&\textbf{0.51}&0.41&0&0.09&0.92&0.58&0.63&0.4&0.83&0.71\\ \hline
+	\end{tabularx}
+	\label{Tab:BCI2008}
+\end{table}
+\end{frame}
+
+
+
+\iffalse
+%------------------------------------------------
+
+\begin{frame}[plain]{Plain Slide}
+	This is a slide with the plain style and it is numbered.
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}[t]
+	This slide has an empty title and is aligned to top.
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}[noframenumbering]{No Slide Numbering}
+	This slide is not numbered and is citing reference \cite{knuth74}.
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{Typesetting and Math}
+	The packages \texttt{inputenc} and \texttt{FiraSans}\footnote{\url{https://fonts.google.com/specimen/Fira+Sans}}\textsuperscript{,}\footnote{\url{http://mozilla.github.io/Fira/}} are used to properly set the main fonts.
+	\vfill
+	This theme provides styling commands to typeset \emph{emphasized}, \alert{alerted}, \textbf{bold}, \textcolor{example}{example text}, \dots
+	\vfill
+	\texttt{FiraSans} also provides support for mathematical symbols:
+	\begin{equation*}
+		e^{i\pi} + 1 = 0.
+	\end{equation*}
+\end{frame}
+
+
+
+%----------------------------------------------------------------------------------------
+%	 SECTION 2
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+%%%
+\begin{frame}{Blocks}
+	These blocks are part of 1 slide, to be displayed consecutively.
+	\begin{block}{Block}
+		Text.
+	\end{block}
+	\pause % Automatically creates a new "page" split between the above and above + below
+	\begin{alertblock}{Alert block}
+		Alert \alert{text}.
+	\end{alertblock}
+	\pause % Automatically creates a new "page" split between the above and above + below
+	\begin{exampleblock}{Example block}
+		Example \textcolor{example}{text}.
+	\end{exampleblock}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{Columns}
+	\begin{columns}
+		\column{0.5\textwidth}
+			This text appears in the left column and wraps neatly with a margin between columns.
+		
+		\column{0.5\textwidth}
+			\includegraphics[width=\linewidth]{Images/placeholder.jpg}
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{Lists}
+	\begin{columns}[T, onlytextwidth] % T for top align, onlytextwidth to suppress the margin between columns
+		\column{0.33\textwidth}
+			Items:
+			\begin{itemize}
+				\item Item 1
+				\begin{itemize}
+					\item Subitem 1.1
+					\item Subitem 1.2
+				\end{itemize}
+				\item Item 2
+				\item Item 3
+			\end{itemize}
+		
+		\column{0.33\textwidth}
+			Enumerations:
+			\begin{enumerate}
+				\item First
+				\item Second
+				\begin{enumerate}
+					\item Sub-first
+					\item Sub-second
+				\end{enumerate}
+				\item Third
+			\end{enumerate}
+		
+		\column{0.33\textwidth}
+			Descriptions:
+			\begin{description}
+				\item[First] Yes.
+				\item[Second] No.
+			\end{description}
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{Table}
+	\begin{table}
+		\centering % Centre the table on the slide
+		\begin{tabular}{l c}
+			\toprule
+			Discipline & Avg. Salary \\
+			\toprule
+			\textbf{Engineering} & \textbf{\$66,521} \\
+			Computer Sciences & \$60,005\\
+			Mathematics and Sciences & \$61,867\\
+			Business & \$56,720\\
+			Humanities \& Social Sciences & \$56,669\\
+			Agriculture and Natural Resources & \$53,565\\
+			Communications & \$51,448\\
+			\midrule
+			\textbf{Average for All Disciplines} & \textbf{\$58,114}\\
+			\bottomrule
+		\end{tabular}
+	\caption{Table caption}
+	\end{table}
+\end{frame}
+\begin{frame}{Conclus\~ao}
+\color{BLACK}%ER
+\tiny
+\begin{table}[h!]
+	\centering
+	\caption{Resultados da competi\c{c}\~ao BCI-IV 2008}
+	\begin{tabularx}{\textwidth}{c|X|c|c|c|c|c|c|c|c|c|c}		
+		\hline\hline
+		Pos&contributor&$\kappa$&1&2&3&4&5&6&7&8&9  \\ \hline
+		$1^{\underline{o}}$&Z. Y. Chin&\textbf{0.60}&0.40&0.21&0.22&	0.95&0.86&0.61&0.56&0.85&0.74 \\ \hline 
+		$2^{\underline{o}}$&H. Gan&\textbf{0.58}&0.42&0.21&0.14&0.94&0.71 &0.62&0.61&0.84&0.78 \\ \hline
+		$3^{\underline{o}}$&D. Coyle&\textbf{0.46}&0.19&0.12&0.12 &0.77&0.57&0.49&0.38&0.85&0.61 \\ \hline
+		$4^{\underline{o}}$&S. Lodder&\textbf{0.43}&0.23&0.31&0.07&0.91& 	0.24&0.42&0.41&0.74&0.53 \\ \hline
+		$5^{\underline{o}}$&J. F. D. Saa&\textbf{0.37}&0.20&0.16&0.16&0.73&0.21&0.19&0.39&0.86&0.44 \\ \hline
+		$6^{\underline{o}}$&Y. Ping&\textbf{0.25}&0.02&0.09&0.07&0.43&0.25&0.00&0.14&0.76&0.47\\ \hline\hline
+		-&L-SVM PMTM&\textbf{0.51}&0.41&0&0.09&0.92&0.58&0.63&0.4&0.83&0.71\\ \hline
+	\end{tabularx}
+	\label{Tab:BCI2008}
+\end{table}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Trabalhos Futuros}
+
+CNN
+\end{frame}
+
+
+\begin{frame}[focus]
+	Thanks for using \textbf{Focus}!
+\end{frame}
+\fi
+
+%----------------------------------------------------------------------------------------
+%	 CLOSING/SUPPLEMENTARY SLIDES
+%----------------------------------------------------------------------------------------
+
+\appendix
+
+\begin{frame}{Referencias}
+	%\nocite{*} % Display all references regardless of if they were cited
+
+	\bibliography{bibliografia.bib}
+	\bibliographystyle{plain}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}[focus]
+AGRADECIMENTOS
+\vfill
+%PQ DEUS NOS ABANDONOU ? 
+%PQ?
+
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

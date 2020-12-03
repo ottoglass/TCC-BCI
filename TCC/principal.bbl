@@ -1,0 +1,103 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.6 }
+
+\bibitem[BCI2000 2018]{BCI2000}
+\abntrefinfo{BCI2000}{BCI2000}{2018}
+{BCI2000. \emph{Introduction to the Mu Rhythm}. 2018.
+Dispon{\'\i}vel em:
+  \url{https://www.bci2000.org/mediawiki/index.php/User\_Tutorial:Introduction\_to\_the\_Mu\_Rhythm}.
+  Acesso em: 29 jul. 2018.}
+
+\bibitem[Blankertz et al. 2016]{10.3389/fnins.2016.00530}
+\abntrefinfo{Blankertz et al.}{BLANKERTZ et al.}{2016}
+{BLANKERTZ, B. et al. The berlin brain-computer interface: Progress beyond
+  communication and control.
+\emph{Frontiers in Neuroscience}, v.~10, p.~530, 2016.
+ISSN 1662-453X.
+Dispon{\'\i}vel em:
+  \url{https://www.frontiersin.org/article/10.3389/fnins.2016.00530}.}
+
+\bibitem[Drongelen 2014]{PMTM}
+\abntrefinfo{Drongelen}{DRONGELEN}{2014}
+{DRONGELEN, W. van. \emph{Multitaper Power Spectrum Estimation}. [s.n.], 2014.
+  Dispon{\'\i}vel em:
+  \url{https://pdfs.semanticscholar.org/752d/1a551b96559458064323eb3de7faaaef4c4e.pdf}.}
+
+\bibitem[Jr. 1991]{PWelch}
+\abntrefinfo{Jr.}{JR.}{1991}
+{JR., O. M.~S. \emph{PSD Computations Using Welch's Method}. 1991.}
+
+\bibitem[Kowalczyk 2017]{SVM2017}
+\abntrefinfo{Kowalczyk}{KOWALCZYK}{2017}
+{KOWALCZYK, A. \emph{Support Vector Machines}: Succinctly. Morrisville, NC:
+  Syncfusion, 2017.}
+
+\bibitem[Leeb C.~Brunner 2008]{GrazBData}
+\abntrefinfo{Leeb C.~Brunner}{LEEB C.~BRUNNER}{2008}
+{LEEB C.~BRUNNER, G. R. M.-P. A. S. G.~P. R. \emph{BCI Competition 2008 –
+  Graz data set B}. 2008.
+Dispon{\'\i}vel em: \url{http://www.bbci.de/competition/iv/desc\_2b.pdf}.}
+
+\bibitem[M{\o}ller 1993]{MollerSCG}
+\abntrefinfo{M{\o}ller}{M{\O}LLER}{1993}
+{M{\O}LLER, M.~F. A scaled conjugate gradient algorithm for fast supervised
+  learning.
+\emph{Neural Networks}, v.~6, p. 525--533, Dec 1993.}
+
+\bibitem[{Pawel Herman} 2008]{Comparison2008}
+\abntrefinfo{{Pawel Herman}}{{Pawel Herman}}{2008}
+{{Pawel Herman}. Comparative analysis of spectral approaches to feature
+  extraction for eeg-based motor imagery classification.
+\emph{{IEEE Transactions on neural systems and rehabilitation}}, v.~16, n.~4,
+  p. 317--326, August 2008.}
+
+\bibitem[Qin Lei~Ding 2004]{Qin2004}
+\abntrefinfo{Qin Lei~Ding}{QIN LEI~DING}{2004}
+{QIN LEI~DING, B.~H. L. Motor imagery classiﬁcation by means of source
+  analysis for brain–computer interface application.
+\emph{JOURNAL OF NEURAL ENGINEERING}, v.~1, p. 135--141, 2004.}
+
+\bibitem[Rao 2013]{RAO}
+\abntrefinfo{Rao}{RAO}{2013}
+{RAO, R. P.~N. \emph{{Brain-Computer Interfacing}}: {An Introduction}. 1. ed.
+  New York: Cambridge University Press, 2013.}
+
+\bibitem[Rao 2010]{Rao2010}
+\abntrefinfo{Rao}{RAO}{2010}
+{RAO, R.~S. R. P.~N. Brain-computer interfacing.
+2010.}
+
+\bibitem[{Robert Plonsey, Jaako Malmivuo} 1995]{EEGPrinciple}
+\abntrefinfo{{Robert Plonsey, Jaako Malmivuo}}{{Robert Plonsey, Jaako
+  Malmivuo}}{1995}
+{{Robert Plonsey, Jaako Malmivuo}. \emph{{Bioelectromagnetism}}: {Principles
+  and Applications of Bioelectric and Biomagnetic Fields}. New York: Johns
+  Hopkins University Press, 1995.}
+
+\bibitem[Schl\"{o}gl C.~Keinrath 2006]{EOG2006}
+\abntrefinfo{Schl\"{o}gl C.~Keinrath}{SCHL\"{o}GL C.~KEINRATH}{2006}
+{SCHL\"{o}GL C.~KEINRATH, D. Z. R. S. R. L.~G. A. A fully automated correction
+  method of eog artifacts in eeg recordings.
+\emph{Clinical Neurophysiology}, v.~118, p. 98--104, November 2006.}
+
+\bibitem[{Simon Haykin} 2008]{Haykin2008}
+\abntrefinfo{{Simon Haykin}}{{Simon Haykin}}{2008}
+{{Simon Haykin}. \emph{{Redes Neurais}}: {Princ\'{i}pios e pr\'{a}tica}. 2. ed.
+  Porto Alegre: Bookman, 2008.}
+
+\bibitem[Vapnik 1995]{Vapnik95}
+\abntrefinfo{Vapnik}{VAPNIK}{1995}
+{VAPNIK, C.~C. V. Support-vector networks.
+\emph{Machine Learning}, AT&T Bell Labs.,Holmdel, NJ,USA, v.~20, p. 273--297,
+  1995.}
+
+\bibitem[Vidal 1977]{Vidal77}
+\abntrefinfo{Vidal}{VIDAL}{1977}
+{VIDAL, J.~J. Real-time detection of brain events in eeg.
+\emph{Proceedings of the IEEE}, v.~65, n.~5, p. 633--641, May 1977.}
+
+\end{thebibliography}

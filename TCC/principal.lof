@@ -1,0 +1,31 @@
+\select@language {brazil}
+\contentsline {figure}{\numberline {1}{\ignorespaces Est\'agios de uma interface cerebral \cite {Rao2010}}}{15}{figure.24}
+\contentsline {figure}{\numberline {2}{\ignorespaces Posi\c {c}\~oes do sistema 10-20 sobre um cr\^anio. Obtido em \cite {EEGPrinciple} }}{17}{figure.30}
+\contentsline {figure}{\numberline {3}{\ignorespaces Compara\c {c}\~ao do sinal Monopolar (B) vs o Bipolar (A). Obtido em \cite {EEGPrinciple} }}{17}{figure.31}
+\contentsline {figure}{\numberline {4}{\ignorespaces (A,B) distribui\c {c}\~ao topogr\'afica no couro cabeludo da diferen\c {c}a calculada do movimento da m\~ao direita (A) real e (B) imagin\'ario de uma pessoa vs ela relaxada com o sinal numa banda 10,5-13,5Hz. (C) O espectro para um outro sujeito em C3 comparando o estado relaxado (linha cortada) vs imagina\c {c}\~ao motora e (D) o espectro $r^2$ para a imagina\c {c}\~ao motora vs o estado relaxado deste sujeito \cite {BCI2000}}}{18}{figure.35}
+\contentsline {figure}{\numberline {5}{\ignorespaces O Efeito da imagina\c {c}\~ao motora esquerda vs direita no ritimo $\mu $ tal como captado pelos eletrodos em C3 (lado esquerdo) e C4 (lado direito) \cite {Qin2004}}}{19}{figure.36}
+\contentsline {figure}{\numberline {6}{\ignorespaces Diagrama neuronio}}{22}{figure.55}
+\contentsline {figure}{\numberline {7}{\ignorespaces Fun\c {c}\~ao Sinal}}{22}{figure.59}
+\contentsline {figure}{\numberline {8}{\ignorespaces Fun\c {c}\~ao log\'istica}}{23}{figure.62}
+\contentsline {figure}{\numberline {9}{\ignorespaces Fun\c {c}\~ao tangente hiperb\'olica}}{24}{figure.65}
+\contentsline {figure}{\numberline {10}{\ignorespaces Diagrama de MLP gen\'erico}}{24}{figure.68}
+\contentsline {figure}{\numberline {11}{\ignorespaces Exemplo de NN para calcular o Backpropagation}}{26}{figure.82}
+\contentsline {figure}{\numberline {12}{\ignorespaces NN amp}}{27}{figure.83}
+\contentsline {figure}{\numberline {13}{\ignorespaces Aproxima\c {c}\~ao linear em (A) vs aproxima\c {c}\~ao quadr\'atica em (B)}}{27}{figure.85}
+\contentsline {figure}{\numberline {14}{\ignorespaces Fluxograma do SCG baseado na explica\c {c}\~ao encontrada no artigo \cite {MollerSCG}}}{28}{figure.86}
+\contentsline {figure}{\numberline {15}{\ignorespaces alguns dos hiperplanos poss\'iveis para a classifica\c {c}\~ao das amostras}}{30}{figure.91}
+\contentsline {figure}{\numberline {16}{\ignorespaces SVM}}{30}{figure.93}
+\contentsline {figure}{\numberline {17}{\ignorespaces NN (A) onde o ponto desconhecido (vazio) \'e classificado como vermelho e (B) onde o ponto desconhecido \'e classificado como preto devido a um ponto preto irregular.}}{32}{figure.105}
+\contentsline {figure}{\numberline {18}{\ignorespaces Espectro de Welch}}{34}{figure.117}
+\contentsline {figure}{\numberline {19}{\ignorespaces Multitaper}}{35}{figure.125}
+\contentsline {figure}{\numberline {20}{\ignorespaces segmento EOG nas sess\~oes do graz-b}}{37}{figure.131}
+\contentsline {figure}{\numberline {21}{\ignorespaces Os dois tipos de sess\~ao em Graz-b \cite {GrazBData}. }}{38}{figure.132}
+\contentsline {figure}{\numberline {22}{\ignorespaces diagrama compare methods}}{39}{figure.138}
+\contentsline {figure}{\numberline {23}{\ignorespaces diagrama do Trials}}{39}{figure.140}
+\contentsline {figure}{\numberline {24}{\ignorespaces Amostragem e extra\c {c}\~ao de caracter\'itsticas}}{41}{figure.147}
+\contentsline {figure}{\numberline {25}{\ignorespaces diagrama do Database}}{41}{figure.148}
+\contentsline {figure}{\numberline {26}{\ignorespaces diagrama de heran\c {c}a do FeatureExtractionFnc}}{42}{figure.151}
+\contentsline {figure}{\numberline {27}{\ignorespaces diagrama de heran\c {c}a do Classifier}}{43}{figure.153}
+\contentsline {figure}{\numberline {28}{\ignorespaces (A) Kappa Overlap vs Window (B) Kappa Overlap vs Window para o experimento completo}}{45}{figure.164}
+\contentsline {figure}{\numberline {29}{\ignorespaces Performance m\'edia dos classificadores utilizados}}{46}{figure.169}
+\contentsline {figure}{\numberline {30}{\ignorespaces Performance m\'edia das Fun\c {c}\~oes de extra\c {c}\~ao utilizadas vs Janela de amostragem}}{46}{figure.171}

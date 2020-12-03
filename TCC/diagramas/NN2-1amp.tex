@@ -1,0 +1,46 @@
+\tikzstyle{weightNode}=[draw,rectangle,minimum size=10pt,inner sep=3pt]
+\tikzset{%
+   input/.style={
+	rectangle,
+	draw,
+	minimum size=0.2cm
+},
+}
+\tikzstyle{stateTransition}=[->, thick]
+\tikzstyle{biasNode}=[-stealth]
+\tikzstyle{nonlinearityNode}=[draw,rectangle,minimum size=25pt, inner sep=2pt]
+\begin{tikzpicture}
+
+\node[draw,circle,minimum size=25pt,inner sep=0pt] (x3) at (0,0) {$\Sigma$};
+\foreach \l [count=\n] in {1,2} {
+	\node[weightNode] (w3\l) at (-2, {1-((\n-1)*2)}) {$\tiny w_{2\left< 1 , \l \right>}$};
+	\draw[stateTransition] (w3\l) to [out=0,in=90+\n*60] node [midway, sloped, above=-2] {} (x3);
+}
+\node[biasNode]  (b3)  at (0,2) {$b_{(2,1)}$};
+\node[nonlinearityNode] (phi3) at (1.75,0) {$\varphi \small{\left(  s \right)  } $};
+\draw[stateTransition] (phi3) -- (3,0) node [midway,above=-0.1cm] {$O_1$};
+\draw[stateTransition,o->] (b3) -- (x3);
+\draw[stateTransition] (x3) to node [midway,above=-1] {$s_1$} (phi);
+
+\foreach \m/\o in {1/1.6,2/-1.6} {
+	\node[draw,circle,minimum size=25pt,inner sep=0pt] (x\m) at (-6.5,\o) {$\Sigma$};
+	\foreach \l [count=\n] in {1,2} {
+		\node[weightNode] (w\m\l) at (-2-6.5, {(1+\o)-((\n-1)*2)}) {$\tiny w_{1\left< \m , \l \right>}$};
+		\draw[stateTransition] (w\m\l) to [out=0,in=90+\n*60] node [midway, sloped, above=-2] {} (x\m);
+	}
+	\node[biasNode]  (b\m)  at (-6.5,2+\o) {$b_{(1,\m)}$};
+	\node[nonlinearityNode] (phi\m) at (1.75-6.5,\o) {$\varphi \small{\left(  s \right)  } $};
+	\draw[stateTransition] (phi\m) -- (w3\m) node [midway,above=-0.1cm] {};
+	\draw[stateTransition,o->] (b\m) -- (x\m);
+	\draw[stateTransition] (x\m) to node [midway,above=-1] {} (phi\m);
+	
+}
+
+\foreach \m [count=\n] in {0,1}{
+	\node[input] (i\n) at (-11,{1.1*(1-(\m)*2)}){};
+	\node[above] at (i\n.north){$I_\n$};
+	\foreach \l in {1,2}{
+		\draw[stateTransition] (i\n.east) -- (w\l\n.west);
+	}
+}
+\end{tikzpicture}

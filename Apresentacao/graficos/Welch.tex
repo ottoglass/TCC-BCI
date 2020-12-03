@@ -1,0 +1,61 @@
+\tikzstyle{sample}=[minimum height=1cm,minimum width=4cm,xshift=2cm,draw=black]
+\tikzstyle{plotsf}=[smooth,yscale=0.05,xscale=8,color=blue]
+%\tikzstyle{lines}=[color=black,line width=0.5mm]
+\tikzstyle{lines}=[color=black,very thick]
+\begin{tikzpicture}[
+ brc/.style args = {#1/#2}{decorate,
+	decoration={brace, amplitude=5pt,
+		raise=#1,#2},% for mirroring of brace
+	thick},]
+%\begin{axis}[axis line style={draw=none},
+%tick style={draw=none},]
+%	\addplot table[y=y,x=t,col sep=comma] {./dados/EEG2.csv};
+%\end{axis}
+\draw (0,0)  [plotsf] plot file {./dados/EEG2.table};
+%\draw [thick,double,->] (4.5cm,-3cm)--(4.5cm,-4cm)--(10cm,-4cm) node [midway,below]{\tiny{\textbf{Extra\c{c}\~ao de caracter\'isticas}}};
+\draw (0,0) node (s0) [sample,minimum width=16cm,xshift=6cm]{};
+\draw [lines, dashdotted ](5.5cm,0.5cm)--(5.5cm,-.5cm);
+\draw [lines, dashdotted ](11cm,0.5cm)--(11cm,-0.5cm);
+%---------------------------
+%Setas para as Janelas FFT
+\draw [-latex,very thick](3cm,-0.5cm)--(3cm,-1.8cm)  node[midway,left]{$\hat{S}_1(f)$};
+\draw [-latex,very thick](8.5cm,-0.5cm)--(8.5cm,-1.8cm)  node[midway,left]{$\hat{S}_2(f)$};
+\draw [-latex,very thick](14cm,-0.5cm)--(14cm,-1.8cm)  node[midway,left]{$\hat{S}_k(f)$};
+%---------------------------
+%Graficos FFT Janelas
+%1
+\begin{scope}[xshift=1cm,yshift=-5cm,xscale=-.03,yscale=-.014,rotate=180]%,xcomb]
+\draw (-5,0) [color=black,thick]rectangle (125,230);
+\draw (0,0)[color=blue,thick]  plot  file {./dados/Welch/W1.table};
+\end{scope}
+%2
+\begin{scope}[xshift=6.5cm,yshift=-5cm,xscale=-.03,yscale=-.014,rotate=180]%,xcomb]
+\draw (-5,0) [color=black,thick]rectangle (125,230);
+\draw (0,0)[color=blue,thick]  plot  file {./dados/Welch/W2.table};
+\end{scope}
+%3
+\begin{scope}[xshift=12cm,yshift=-5cm,xscale=-.03,yscale=-.014,rotate=180]%,xcomb]
+\draw (-5,0) [color=black,thick]rectangle (125,230);
+\draw (0,0)[color=blue,thick]  plot  file {./dados/Welch/W3.table};
+\end{scope}
+%---------------------------
+%Espectro de Welch
+
+\begin{scope}[xshift=6.5cm,yshift=-10.5cm,xscale=-.03,yscale=-.014,rotate=180]%,xcomb]
+\draw (-5,0) [color=black,thick]rectangle (125,230);
+\draw (0,0)[color=blue,thick]  plot  file {./dados/Welch/WMean.table};
+\end{scope}
+%---------------------------
+%SUM
+\begin{scope}[xshift=8.3cm,yshift=-6cm]
+\node[circle,thick,draw=black] (0,0) {\huge{$+$}};
+\end{scope}
+%SUM ARROWS
+\draw [-latex,very thick](3cm,-5cm)--(3cm,-6cm)--(7.9cm,-6cm);
+\draw [-latex,very thick](8.3cm,-5cm)--(8.3cm,-5.5cm);
+\draw [-latex,very thick](14cm,-5cm)--(14cm,-6cm)--(8.7cm,-6cm);
+%MEAN ARROW
+\draw [-latex,very thick](8.3cm,-6.35cm)--(8.3cm,-7.25cm) node[midway,left]{$\frac{1}{K}$};
+
+
+\end{tikzpicture}

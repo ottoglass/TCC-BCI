@@ -1,0 +1,111 @@
+\tikzstyle{sample}=[minimum height=1cm,minimum width=4cm,xshift=2cm,draw=black]
+\tikzstyle{plotsf}=[smooth,yscale=0.05,xscale=8,color=blue,]
+\tikzstyle{lines}=[color=black,very thick]
+\begin{tikzpicture}[
+ brc/.style args = {#1/#2}{decorate,
+	decoration={brace, amplitude=5pt,
+		raise=#1,#2},% for mirroring of brace
+	thick},]
+	
+
+\begin{scope}[xscale=0.7,yscale=.3]
+\begin{axis}[%axis line style={draw=none},
+tick style={draw=blue}, yticklabels={,,}, xticklabels={,,},mark repeat=50,ticks=none
+]
+	\addplot[color=blue] table[y=EEG,x=t,col sep=comma] {./dados/Multitaper/multitaper_all.csv};
+\end{axis}
+\end{scope}
+%----------------------------Tapered EEG--------------
+%1
+\begin{scope}[xscale=0.7,yscale=.3,yshift=7cm,xshift=8cm]
+\begin{axis}[%axis line style={draw=none},
+tick style={draw=blue}, yticklabels={,,}, xticklabels={,,},mark repeat=50,ticks=none
+]
+	\addplot[color=red,loosely dashdotted,very thick] table[y=S1,x=t,col sep=comma] {./dados/Multitaper/multitaper_all.csv};
+	\addplot[color=blue] table[y=ES1,x=t,col sep=comma] {./dados/Multitaper/multitaper_all.csv};
+\end{axis}
+\end{scope}
+%2
+\begin{scope}[xscale=0.7,yscale=.3,xshift=8cm]
+\begin{axis}[%axis line style={draw=none},
+tick style={draw=blue}, yticklabels={,,}, xticklabels={,,},mark repeat=50,ticks=none
+]
+	\addplot[color=red,loosely dashdotted,very thick] table[y=S2,x=t,col sep=comma] {./dados/Multitaper/multitaper_all.csv};
+	\addplot[color=blue] table[y=ES2,x=t,col sep=comma] {./dados/Multitaper/multitaper_all.csv};
+\end{axis}
+\end{scope}
+%3
+\begin{scope}[xscale=0.7,yscale=.3,yshift=-7cm,xshift=8cm]
+\begin{axis}[%axis line style={draw=none},
+tick style={draw=blue}, yticklabels={,,}, xticklabels={,,},mark repeat=50,ticks=none
+]
+	\addplot[color=red,loosely dashdotted,very thick] table[y=S3,x=t,col sep=comma] {./dados/Multitaper/multitaper_all.csv};
+	\addplot[color=blue] table[y=ES3,x=t,col sep=comma] {./dados/Multitaper/multitaper_all.csv};
+\end{axis}
+\end{scope}
+%---------------------------Tapered PSDs--------------------
+%1
+\begin{scope}[xscale=0.55,yscale=.3,yshift=7cm,xshift=21cm]
+\begin{axis}[%axis line style={draw=none},
+tick style={draw=blue}, yticklabels={,,}, xticklabels={,,},mark repeat=50,ticks=none
+]
+	\addplot[color=blue] table[y=TS1,x=f,col sep=comma] {./dados/Multitaper/multitaper_all.csv};
+\end{axis}
+\end{scope}
+%2
+\begin{scope}[xscale=0.55,yscale=.3,xshift=21cm]
+\begin{axis}[%axis line style={draw=none},
+tick style={draw=blue}, yticklabels={,,}, xticklabels={,,},mark repeat=50,ticks=none
+]
+	\addplot[color=blue] table[y=TS2,x=f,col sep=comma] {./dados/Multitaper/multitaper_all.csv};
+\end{axis}
+\end{scope}
+%3
+\begin{scope}[xscale=0.55,yscale=.3,yshift=-7cm,xshift=21cm]
+\begin{axis}[%axis line style={draw=none},
+tick style={draw=blue}, yticklabels={,,}, xticklabels={,,},mark repeat=50,ticks=none
+]
+	\addplot[color=blue] table[y=TS3,x=f,col sep=comma] {./dados/Multitaper/multitaper_all.csv};
+\end{axis}
+\end{scope}
+%---------------------------------Multitaper---------
+\begin{scope}[xscale=0.55,yscale=.3,xshift=32cm]
+\begin{axis}[%axis line style={draw=none},
+tick style={draw=blue}, yticklabels={,,}, xticklabels={,,},mark repeat=50,ticks=none
+]
+	\addplot[color=blue] table[y=PSD,x=f,col sep=comma] {./dados/Multitaper/multitaper_all.csv};
+\end{axis}
+\end{scope}
+%-----------------Sum-------------------------
+\begin{scope}[xshift=16.5cm,yshift=.8cm]
+\node[circle,thick,draw=black] (0,0) {\huge{$+$}};
+\end{scope}
+%-----------------Arrows----------------------
+%-------EEG To Tapered-------
+%1
+\draw [-latex,very thick](3cm,1.7cm)--(3cm,3cm)--(5.6cm,3cm) node[midway,above]{$\times T_1$};
+%2
+\draw [-latex,very thick](4.8cm,.8cm)--(5.6cm,.8cm) node[midway,above]{$\times T_2$};
+%3
+\draw [-latex,very thick](3cm,0cm)--(3cm,-1.4cm)--(5.6cm,-1.4cm) node[midway,above]{$\times T_k$};
+%--------Tapered To PSDs------
+%1
+\draw [-latex,very thick](10.4cm,3cm)--(11.6cm,3cm) node[midway,above]{$\hat{S}_1(f)$};
+
+%2
+\draw [-latex,very thick](10.4cm,.8cm)--(11.6cm,.8cm) node[midway,above]{$\hat{S}_2(f)$};
+
+%3
+\draw [-latex,very thick](10.4cm,-1.4cm)--(11.6cm,-1.4cm) node[midway,above]{$\hat{S}_k(f)$};
+%--------PSDS to Sum-----------
+%1
+\draw [-latex,very thick](15.3cm,3cm)--(16.5cm,3cm) --(16.5cm,1.2cm) ;
+
+%2
+\draw [-latex,very thick](15.3cm,.8cm)--(16.1cm,.8cm) ;
+
+%3
+\draw [-latex,very thick](15.3cm,-1.4cm)--(16.5cm,-1.4cm) --(16.5cm,.3cm) ;
+%----------Average----------
+\draw [-latex,very thick](16.9cm,.8cm)--(17.6cm,.8cm) node[midway,above]{$\frac{1}{K}$};
+\end{tikzpicture}

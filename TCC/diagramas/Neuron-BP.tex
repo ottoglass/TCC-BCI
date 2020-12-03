@@ -1,0 +1,35 @@
+\tikzstyle{weightNode}=[draw,circle,minimum size=10pt,inner sep=0pt]
+\tikzset{%
+	every weightNode/.style={
+		circle,
+		draw,
+		minimum size=11t,
+		inner sep=1pt,
+	},
+	weightNode missing/.style={
+		draw=none, 
+		scale=4,
+		text height=0.333cm,
+		execute at begin node=\color{black}$\vdots$
+	},
+}
+\tikzstyle{stateTransition}=[->, thick]
+\tikzstyle{biasNode}=[-stealth]
+\tikzstyle{nonlinearityNode}=[draw,rectangle,minimum size=25pt, inner sep=2pt]
+\newcommand{\testsf}{1}
+\begin{tikzpicture}
+\node[draw,circle,minimum size=25pt,inner sep=0pt] (x) at (0,0) {$\Sigma$};
+
+\foreach \l [count=\n] in {0,1,2,3,n} {
+	\node[weightNode] (w\l) at (-2.5, {(3*\testsf)-\n*\testsf}) {$\tiny w_{k \l}$};
+	\draw[stateTransition] (w\l) to [out=0,in=90+\n*30] node [midway, sloped,above] {$x_{\l} w_{k \l}$} (x);
+	\node[biasNode] (x\l) at (-4,{(3*\testsf)-\n*\testsf}){$x_\l$};
+	\draw[stateTransition,o->] (x\l) -- (w\l);
+}
+\node[biasNode]  (b)  at (0,2) {$b_k$};
+\node[nonlinearityNode] (phi) at (2,0) {$\varphi \small{\left(  s_{k} \right)  } $};
+\draw[stateTransition] (phi) -- (3.25,0) node [midway,above] {$y_k$};
+\draw[stateTransition,o->] (b) -- (x);
+\draw[stateTransition] (x) to node [midway,above] {$s_k$} (phi);
+\node (dots) at (-3.5, -1.15) {$\vdots$};
+\end{tikzpicture}
