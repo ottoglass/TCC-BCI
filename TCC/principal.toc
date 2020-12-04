@@ -26,32 +26,32 @@
 \contentsline {subsection}{\numberline {2.3.1}Hiperplanos}{29}{subsection.88}
 \contentsline {subsection}{\numberline {2.3.2}Dedu\c {c}\~ao do hiperplano \'otimo}{29}{subsection.92}
 \contentsline {subsection}{\numberline {2.3.3}Kernel}{31}{subsection.103}
-\contentsline {section}{\numberline {2.4}Avalia\c {c}\~ao de performance de classifica\c {c}\~ao}{32}{section.106}
-\contentsline {subsection}{\numberline {2.4.1}Precis\~ao de classifica\c {c}\~ao}{32}{subsection.107}
-\contentsline {subsection}{\numberline {2.4.2}Coefficiente Kappa}{32}{subsection.109}
-\contentsline {section}{\numberline {2.5}M\'etodos de estimativa de espectro (PSD)}{33}{section.111}
-\contentsline {subsection}{\numberline {2.5.1}Periodograma}{33}{subsection.113}
-\contentsline {subsection}{\numberline {2.5.2}Espectro de Welch (PWelch)}{33}{subsection.116}
-\contentsline {subsection}{\numberline {2.5.3}\textit {Multitaper Power Spectral density} (PMTM)}{35}{subsection.124}
+\contentsline {section}{\numberline {2.4}Avalia\c {c}\~ao de performance de classifica\c {c}\~ao}{32}{section.105}
+\contentsline {subsection}{\numberline {2.4.1}Precis\~ao de classifica\c {c}\~ao}{32}{subsection.106}
+\contentsline {subsection}{\numberline {2.4.2}Coefficiente Kappa}{32}{subsection.108}
+\contentsline {section}{\numberline {2.5}M\'etodos de estimativa de espectro (PSD)}{33}{section.110}
+\contentsline {subsection}{\numberline {2.5.1}Periodograma}{33}{subsection.112}
+\contentsline {subsection}{\numberline {2.5.2}Espectro de Welch (PWelch)}{33}{subsection.115}
+\contentsline {subsection}{\numberline {2.5.3}\textit {Multitaper Power Spectral density} (PMTM)}{35}{subsection.123}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}Desenvolvimento}{37}{chapter.129}
-\contentsline {section}{\numberline {3.1}Amostras}{37}{section.130}
-\contentsline {section}{\numberline {3.2}Framework}{39}{section.135}
-\contentsline {subsection}{\numberline {3.2.1}Compare Methods}{39}{subsection.137}
-\contentsline {subsection}{\numberline {3.2.2}Trials}{39}{subsection.139}
-\contentsline {subsection}{\numberline {3.2.3}Database}{40}{subsection.141}
-\contentsline {subsection}{\numberline {3.2.4}FeatureExtractionFnc}{42}{subsection.150}
-\contentsline {subsection}{\numberline {3.2.5}Classifier}{43}{subsection.152}
-\contentsline {section}{\numberline {3.3}M\'etodos de avalia\c {c}\~ao de performance}{44}{section.160}
+\contentsline {chapter}{\chapternumberline {3}Desenvolvimento}{37}{chapter.128}
+\contentsline {section}{\numberline {3.1}Amostras}{37}{section.129}
+\contentsline {section}{\numberline {3.2}Framework}{39}{section.134}
+\contentsline {subsection}{\numberline {3.2.1}Compare Methods}{39}{subsection.136}
+\contentsline {subsection}{\numberline {3.2.2}Trials}{39}{subsection.138}
+\contentsline {subsection}{\numberline {3.2.3}Database}{40}{subsection.140}
+\contentsline {subsection}{\numberline {3.2.4}FeatureExtractionFnc}{42}{subsection.149}
+\contentsline {subsection}{\numberline {3.2.5}Classifier}{43}{subsection.151}
+\contentsline {section}{\numberline {3.3}M\'etodos de avalia\c {c}\~ao de performance}{44}{section.159}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}Resultados e An\'alises}{45}{chapter.161}
-\contentsline {section}{\numberline {4.1}Performances M\'edias}{45}{section.162}
-\contentsline {subsection}{\numberline {4.1.1}Overlap vs Janela de Amostragem}{45}{subsection.163}
-\contentsline {subsection}{\numberline {4.1.2}Classificadores}{45}{subsection.165}
-\contentsline {subsection}{\numberline {4.1.3}Fun\c {c}\~oes de extra\c {c}\~ao vs Janela de Amostragem}{46}{subsection.170}
-\contentsline {section}{\numberline {4.2}Melhores Performances}{47}{section.172}
+\contentsline {chapter}{\chapternumberline {4}Resultados e An\'alises}{45}{chapter.160}
+\contentsline {section}{\numberline {4.1}Performances M\'edias}{45}{section.161}
+\contentsline {subsection}{\numberline {4.1.1}Overlap vs Janela de Amostragem}{45}{subsection.162}
+\contentsline {subsection}{\numberline {4.1.2}Classificadores}{45}{subsection.164}
+\contentsline {subsection}{\numberline {4.1.3}Fun\c {c}\~oes de extra\c {c}\~ao vs Janela de Amostragem}{46}{subsection.169}
+\contentsline {section}{\numberline {4.2}Melhores Performances}{47}{section.171}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}Conclusão}{48}{chapter.177}
+\contentsline {chapter}{\chapternumberline {5}Conclusão}{48}{chapter.176}
 \vspace {\cftbeforepartskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\bfseries REFER\^ENCIAS}{49}{chapter*.180}
+\contentsline {chapter}{\bfseries REFER\^ENCIAS}{49}{chapter*.179}

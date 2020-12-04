@@ -15,17 +15,16 @@
 \contentsline {figure}{\numberline {14}{\ignorespaces Fluxograma do SCG baseado na explica\c {c}\~ao encontrada no artigo \cite {MollerSCG}}}{28}{figure.86}
 \contentsline {figure}{\numberline {15}{\ignorespaces alguns dos hiperplanos poss\'iveis para a classifica\c {c}\~ao das amostras}}{30}{figure.91}
 \contentsline {figure}{\numberline {16}{\ignorespaces SVM}}{30}{figure.93}
-\contentsline {figure}{\numberline {17}{\ignorespaces NN (A) onde o ponto desconhecido (vazio) \'e classificado como vermelho e (B) onde o ponto desconhecido \'e classificado como preto devido a um ponto preto irregular.}}{32}{figure.105}
-\contentsline {figure}{\numberline {18}{\ignorespaces Espectro de Welch}}{34}{figure.117}
-\contentsline {figure}{\numberline {19}{\ignorespaces Multitaper}}{35}{figure.125}
-\contentsline {figure}{\numberline {20}{\ignorespaces segmento EOG nas sess\~oes do graz-b}}{37}{figure.131}
-\contentsline {figure}{\numberline {21}{\ignorespaces Os dois tipos de sess\~ao em Graz-b \cite {GrazBData}. }}{38}{figure.132}
-\contentsline {figure}{\numberline {22}{\ignorespaces diagrama compare methods}}{39}{figure.138}
-\contentsline {figure}{\numberline {23}{\ignorespaces diagrama do Trials}}{39}{figure.140}
-\contentsline {figure}{\numberline {24}{\ignorespaces Amostragem e extra\c {c}\~ao de caracter\'itsticas}}{41}{figure.147}
-\contentsline {figure}{\numberline {25}{\ignorespaces diagrama do Database}}{41}{figure.148}
-\contentsline {figure}{\numberline {26}{\ignorespaces diagrama de heran\c {c}a do FeatureExtractionFnc}}{42}{figure.151}
-\contentsline {figure}{\numberline {27}{\ignorespaces diagrama de heran\c {c}a do Classifier}}{43}{figure.153}
-\contentsline {figure}{\numberline {28}{\ignorespaces (A) Kappa Overlap vs Window (B) Kappa Overlap vs Window para o experimento completo}}{45}{figure.164}
-\contentsline {figure}{\numberline {29}{\ignorespaces Performance m\'edia dos classificadores utilizados}}{46}{figure.169}
-\contentsline {figure}{\numberline {30}{\ignorespaces Performance m\'edia das Fun\c {c}\~oes de extra\c {c}\~ao utilizadas vs Janela de amostragem}}{46}{figure.171}
+\contentsline {figure}{\numberline {17}{\ignorespaces Espectro de Welch}}{34}{figure.116}
+\contentsline {figure}{\numberline {18}{\ignorespaces Multitaper}}{35}{figure.124}
+\contentsline {figure}{\numberline {19}{\ignorespaces segmento EOG nas sess\~oes do graz-b}}{37}{figure.130}
+\contentsline {figure}{\numberline {20}{\ignorespaces Os dois tipos de sess\~ao em Graz-b \cite {GrazBData}. }}{38}{figure.131}
+\contentsline {figure}{\numberline {21}{\ignorespaces diagrama compare methods}}{39}{figure.137}
+\contentsline {figure}{\numberline {22}{\ignorespaces diagrama do Trials}}{39}{figure.139}
+\contentsline {figure}{\numberline {23}{\ignorespaces Amostragem e extra\c {c}\~ao de caracter\'itsticas}}{41}{figure.146}
+\contentsline {figure}{\numberline {24}{\ignorespaces diagrama do Database}}{41}{figure.147}
+\contentsline {figure}{\numberline {25}{\ignorespaces diagrama de heran\c {c}a do FeatureExtractionFnc}}{42}{figure.150}
+\contentsline {figure}{\numberline {26}{\ignorespaces diagrama de heran\c {c}a do Classifier}}{43}{figure.152}
+\contentsline {figure}{\numberline {27}{\ignorespaces (A) Kappa Overlap vs Window (B) Kappa Overlap vs Window para o experimento completo}}{45}{figure.163}
+\contentsline {figure}{\numberline {28}{\ignorespaces Performance m\'edia dos classificadores utilizados}}{46}{figure.168}
+\contentsline {figure}{\numberline {29}{\ignorespaces Performance m\'edia das Fun\c {c}\~oes de extra\c {c}\~ao utilizadas vs Janela de amostragem}}{46}{figure.170}

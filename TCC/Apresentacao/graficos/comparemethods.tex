@@ -1,0 +1,59 @@
+\tikzstyle{block} = [
+		% The shape:
+		rectangle split,
+		rectangle split parts =1,
+		% The size:
+		minimum size=6mm,
+		draw,
+		text badly centered,
+		draw=blue!80!black!40,
+		text=black,
+	]
+\tikzstyle{decision} = [
+		diamond,
+		draw,
+		text badly centered,
+		color=blue,
+		aspect=2,
+		inner sep=1.5pt,
+		scale=0.7,
+]
+\tikzstyle{begin} = [
+		rounded rectangle,
+		draw,
+		text badly centered,
+		minimum size = 1cm,
+		color=blue,
+]
+\tikzstyle{input} = [
+ellipse,
+draw,
+text badly centered,
+minimum size = 1cm,
+color=blue,
+]
+\tikzstyle{coord} = [
+-stealth,
+inner sep =0 pt,
+]
+\begin{tikzpicture}[node distance= 0.6cm,
+transition/.style={very thick,->}
+]
+
+\node [begin] (start) {\textbf{In\'icio itera\c{c}\~ao}};
+\node[block,rectangle split parts=2] (Sujeito) [below=of start] {\nodepart{one}Sele\c{c}\~ao
+	 \nodepart{two} Sujeito};
+\node[block,rectangle split parts=2] (DB) [below=of Sujeito]{\nodepart{one}Obten\c{c}\~ao \nodepart{two} Database};
+\node[block,rectangle split parts=2] (Dataset) [below=of DB] {\nodepart{one} Obten\c{c}\~ao
+\nodepart{two} Dataset};
+\node[block,rectangle split parts=1](Train) [below=of Dataset]{
+	\nodepart{one} Treinamento classificador
+};
+\node[block,rectangle split parts=1] (Avaliacao1) [below=of Train]{Avalia\c{c}\~ao performance por Janela amostrada};
+%\node []
+\draw [transition] (start) -> (Sujeito);
+\draw [transition] (Sujeito) -> (DB);
+\draw [transition] (DB) -> (Dataset);
+\draw [transition] (Dataset) -> (Train);
+\draw [transition] (Train) -> (Avaliacao1);
+\end{tikzpicture}

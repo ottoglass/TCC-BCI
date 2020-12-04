@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6500 64-bit) (preloaded format=xelatex 2018.7.31)  2 DEC 2020 18:16
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6500 64-bit) (preloaded format=xelatex 2018.7.31)  3 DEC 2020 21:53
 entering extended mode
 **./principal.tex
 (principal.tex
@@ -2793,7 +2793,7 @@ Overfull \hbox (32.80109pt too wide) in paragraph at lines 173--286
 [27] [28] (diagramas/hiperplanos.tex) (diagramas/SVM.tex) [29
 
 ] [30] [31]
-(diagramas/kNN.tex) (diagramas/kNN2.tex) [32]
+[32]
 Package acronym Info: Label `acro:PSD' newly defined as it shall be overridden
 although it is yet undefined on input line 437.
  (diagramas/Welch.tex
@@ -2808,8 +2808,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 ]
 Package acronym Info: Label `acro:DFT' newly defined as it shall be overridden
 although it is yet undefined on input line 489.
-
-[34] (diagramas/multitaper.tex
+ [34] (diagramas/multitaper.tex
 PGFPlots: reading {./dados/Multitaper/multitaper_all.csv}
 
 
@@ -6004,10 +6003,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 51998 strings out of 427839
- 1107939 string characters out of 3152538
- 1628929 words of memory out of 3000000
- 55117 multiletter control sequences out of 15000+200000
+ 51986 strings out of 427839
+ 1107738 string characters out of 3152538
+ 1629568 words of memory out of 3000000
+ 55111 multiletter control sequences out of 15000+200000
  637663 words of font info for 97 fonts, out of 3000000 for 9000
  1330 hyphenation exceptions out of 8191
  63i,19n,103p,970b,2271s stack positions out of 5000i,500n,10000p,200000b,50000s

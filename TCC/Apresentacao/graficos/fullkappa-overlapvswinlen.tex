@@ -1,0 +1,39 @@
+\begin{tikzpicture}
+\begin{axis}[ybar,
+ylabel={\textbf{{\LARGE $\kappa$} - Cohen}},
+symbolic x coords={0,25,50},
+enlargelimits=0.15,
+bar width=7pt,
+xlabel=\textbf{{Overlap \%}},
+scale=1,
+ymin=0.05,
+ymax=0.37,
+xtick=data,
+legend style={at={(0.5,-0.25)},anchor=north,legend columns=-1},
+]
+
+\addlegendimage{empty legend}
+\addlegendentry[]{\textbf{Janela}  }
+
+\addplot coordinates{
+	(0,0.194592780487009)
+	(25,0.301151008868141)
+	(50,0.297452810791095)
+	
+};
+\addlegendentry{0.5s}
+\addplot coordinates {
+	(0,0.213851347718643)
+	(25,0.360070705941324)
+	(50,0.288910829755114)
+};
+\addlegendentry{1s}
+\addplot coordinates {
+	(0,0.2669239009365)
+	(25,0.358554160497779)
+	(50,0.299020891771033)
+};
+\addlegendentry{2s}
+\end{axis}
+\node[] at (-1,6) {\textbf{B}};
+\end{tikzpicture}

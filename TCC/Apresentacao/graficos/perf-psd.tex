@@ -1,0 +1,35 @@
+\begin{tikzpicture}
+\begin{axis}[ybar,
+ylabel={\textbf{{\LARGE $\kappa$} - Cohen}},
+symbolic x coords={0.5,1,2},
+enlargelimits=0.15,
+bar width=7pt,
+xlabel={\textbf{Janela de Amostragem (s)}},
+xtick=data,
+legend style={at={(0.5,-0.2)},anchor=north,legend columns=-1},
+scale=1.2,
+ymin=0.05,
+]
+
+\addplot coordinates {
+
+	(0.5,0.168200019315786)
+	(1,0.20381375312512)
+	(2,0.212802028218695)
+
+};
+\addlegendentry[]{PSDp}
+\addplot coordinates {
+	(0.5,0.208379846569074)
+	(1,0.252435974315611)
+	(2,0.298970458553792)
+};
+\addlegendentry[]{PWelch}
+\addplot coordinates {
+	(0.5,0.209548784055341)
+	(1,0.261063892038425)
+	(2,0.318055555555556)
+};
+\addlegendentry[]{PMTM}
+\end{axis}
+\end{tikzpicture}

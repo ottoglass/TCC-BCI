@@ -1,0 +1,9 @@
+\begin{tikzpicture}[domain=-1.1:1.8,scale=1.8]
+%\draw[very thin,color=gray,step=0.25] (-1.4,-1.4) grid (1.4,1.4);
+\draw[->] (-1.7,0) -- (1.7,0) node[right]{$\textbf{w}$};
+\draw[->] (0,-1.7) -- (0,1.7) node[above]{$E \left( \textbf{w} \right) $};
+\draw[very thick,color=cyan] plot (\x,{(\x)^4-(\x)^3-(\x)^2-0.2*\x+0.2});
+\draw[very thick,color=red,dashed,domain=-1.4:1.3] plot (\x,{-0.432*(\x-0.2)+0.1136});
+\fill[black,thick]     (0.2,0.1136)    circle (1pt) node [above] {$\textbf{w}_n $};
+\node[] at (-1.9,2) {\textbf{A}};
+\end{tikzpicture}
