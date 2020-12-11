@@ -1,7 +1,7 @@
 # Comparação de técnicas de aprendizagem de máquina e processamento de sinal para interfaces cerebrais
 
 Este projeto foi desenvolvido como um trabalho de conclusao de curso. Este Git existe para permitir a reproducao dos testes e para disponibilizar os diagramas gerados no LaTeX. 
-## Requisitos:
+## Requisitos
 * MATLAB 2018a
 * [Biosig](http://biosig.sourceforge.net/download.html) para ler os arquivos GDF
 * [Dados BCI IV 2008 - dataset 2b](http://www.bbci.de/competition/iv/#datasets)
