@@ -1,1 +1,5 @@
-*.tex linguist-detectable=false
+*.tex toclinguist-detectable=false
+*.sty toclinguist-detectable=false
+*.bib toclinguist-detectable=false
+*.gz toclinguist-detectable=false
+*.log toclinguist-detectable=false
