@@ -3,3 +3,11 @@
 *.bib toclinguist-detectable=false
 *.gz toclinguist-detectable=false
 *.log toclinguist-detectable=false
+*.cls toclinguist-detectable=false
+*.bst toclinguist-detectable=false
+*.aux toclinguist-detectable=false
+*.lot toclinguist-detectable=false
+*.lof toclinguist-detectable=false
+*.txss toclinguist-detectable=false
+*.bbl toclinguist-detectable=false
+*.txt toclinguist-detectable=false
